@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+
+.uploadButton{
+    width: 340px;
+    padding: 10px;
+    border-radius: 100px;
+    font-size: 1.6em;
+    background-color: rgb(20, 76, 124);
+    color: white;
+    font-weight: 550;
+    transition: background-color 0.4s, box-shadow 0.4s, transform 0.4s;
+    border: none;
+}
+
+.uploadButton:hover{
+    background-color: rgb(8, 48, 82);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.686);
+    transform: scale(1.06);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    text-align: center;
+    align-items: center;
+}
