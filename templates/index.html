@@ -26,12 +26,6 @@
             <input type="file" name="notesFile" class = "form-control-file" accept = "application/pdf" required>
         </div>
         <br>
-        
-        {% if uploaded_file_url %}
-            <div>
-                <iframe src="{{ uploaded_file_url }}" width="800" height="600" /> </iframe>
-            </div>
-        {% endif %}
 
         <button type="submit" class="btn btn-primary uploadButton">Upload </button>
 
