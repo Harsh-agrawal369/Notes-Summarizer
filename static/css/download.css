@@ -1,0 +1,37 @@
+body{
+    /* background-color: rgba(157, 196, 254, 0.503); */
+    background-image: linear-gradient(to right, rgba(86, 152, 239, 0.776) , rgba(155, 241, 212, 0.757));
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1{
+    background-color: rgba(255, 255, 255, 0.657);
+    margin: 0px;
+    padding: 15px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.299);
+}
+
+button{
+    font-size: 1.5em;
+    border: none;
+    padding: 20px;
+    margin: 32px;
+    width: 480px;
+    background-color: rgba(112, 112, 255, 0.814);
+    border-radius: 4px;
+    color: white;
+    transition: scale 0.3s;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.718);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+
+a{
+    color: white;
+}
+
+.pdfImage{
+    width: 95px;
+    height: 60px;
+    padding: 0 20px;
+}

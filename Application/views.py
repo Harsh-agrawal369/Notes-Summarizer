@@ -104,7 +104,7 @@ def upload_file(request):
                 
             create_summary_pdf(summary_text_path, os.path.join(txt_files_path, "Summary.pdf"))
             
-            return HttpResponse("File uploaded and processed successfully.")
+            return render(request, "download.html")
         else:
             return HttpResponse("No file uploaded. Please select a file to upload.", status=400)
     else:
@@ -168,3 +168,26 @@ def create_summary_pdf(txt_file_path, pdf_file_path):
     pdf.output(pdf_file_path)
 
     print(f"Summary PDF created at: {pdf_file_path}")
+
+def pdf(request):
+    current_directory = os.path.dirname(__file__)
+    pdf_dir = os.path.join(current_directory, "txtFiles")
+    
+    pdf_file = None
+    files_in_dir = os.listdir(pdf_dir)
+    
+    for file_name in files_in_dir:
+        if file_name.lower().endswith(".pdf"):
+            pdf_file = file_name
+            break
+
+    if pdf_file:
+        pdf_file_path = os.path.join(pdf_dir, pdf_file)
+        
+        with open(pdf_file_path, 'rb') as pdf_file:
+            response = HttpResponse(pdf_file.read(), content_type='application/pdf')
+            
+        response['Content-Disposition'] = f'attachment; filename= "{os.path.basename(pdf_file_path)}"'       
+        return response
+    else:
+        return HttpResponse("No PDF Found", status=404)
