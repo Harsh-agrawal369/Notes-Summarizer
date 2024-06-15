@@ -9,7 +9,8 @@ pdf2image = "*"
 opencv-python = "*"
 easyocr = "*"
 groq = "*"
-decouple = "*"
+python-decouple = "*"
+fpdf = "*"
 
 [dev-packages]
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Download Summary</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -15,31 +15,8 @@
 
 </head>
 <body>
-    
+
     <h1>HEADING HERE</h1>
-
-    <hr>
-
-    <br><br><br>
-
-    <form action="{% url 'upload_file' %}" method = "post" enctype = "multipart/form-data">
-        {% csrf_token %}
-
-        <div class = "form-group">
-            <input type="file" name="notesFile" class = "form-control-file" accept = "application/pdf" required>
-        </div>
-        <br>
-        
-        {% if uploaded_file_url %}
-            <div>
-                <iframe src="{{ uploaded_file_url }}" width="800" height="600" /> </iframe>
-            </div>
-        {% endif %}
-
-        <button type="submit" class="btn btn-primary uploadButton">Upload </button>
-
-    </form>
-
-
+    
 </body>
 </html>

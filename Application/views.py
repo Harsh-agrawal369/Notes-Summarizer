@@ -6,7 +6,9 @@ import easyocr
 import cv2
 from groq import Groq
 from decouple import config
+from fpdf import FPDF
 # Create your views here.
+
 def home(request):
     return render(request, 'index.html')
 
@@ -24,6 +26,7 @@ def upload_file(request):
             
             empty_dir("Dir1")  # Ensure Dir1 is emptied before use
             empty_dir("txtFiles")
+            empty_dir(txt_files_path)
 
             # Save the file to the specified path
             with open(file_path, 'wb') as destination:
@@ -76,7 +79,7 @@ def upload_file(request):
             )
 
             # Read the content of output.txt
-            with open("Output.txt", "r") as file:
+            with open(output_text_path, "r") as file:
                 text = file.read()
 
             # Create the chat completion request to summarize the text
@@ -91,13 +94,15 @@ def upload_file(request):
             )
 
             # Print the summarized content
-            print(chat_completion.choices[0].message.content)
+            # print(chat_completion.choices[0].message.content)
             
-            empty_dir(output_text_path)
+            empty_dir(txt_files_path)
 
             summary_text_path = os.path.join(txt_files_path, "Summary.txt")
             with open(summary_text_path, "w") as summary_file:
                 summary_file.write(chat_completion.choices[0].message.content)
+                
+            create_summary_pdf(summary_text_path, os.path.join(txt_files_path, "Summary.pdf"))
             
             return HttpResponse("File uploaded and processed successfully.")
         else:
@@ -143,3 +148,23 @@ def pdf_to_image(path_file, DOWNLOAD_FOLDER, elemnt):
     filelimit = image_counter - 1
     print('Total no. of pages: ', filelimit)
     return page_lst
+
+def create_summary_pdf(txt_file_path, pdf_file_path):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    
+    with open(txt_file_path, "r", encoding="utf-8") as file:
+        lines = file.readlines()
+    
+    pdf.set_font("Arial", 'B', 16)
+    pdf.cell(200, 10, txt="Summary", ln=True, align='C')
+    pdf.ln(10)
+    
+    pdf.set_font("Arial", size=12)
+    for line in lines:
+        pdf.multi_cell(0, 10, line)
+    
+    pdf.output(pdf_file_path)
+
+    print(f"Summary PDF created at: {pdf_file_path}")
