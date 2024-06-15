@@ -29,10 +29,10 @@ Follow these steps to use the application:
 For any inquiries or contributions, please reach out to the project contributors:
 
 - **Harsh Agrawal**
-  - Email: [harsh@example.com](mailto:harsh@example.com)
+  - Email: [agrawalharsh831@gmail.com](mailto:agrawalharsh831@gmail.com)
 
 - **Shaurya Pratap Singh**
-  - Email: [shaurya@example.com](mailto:shaurya@example.com)
+  - Email: [shauryajt3455@gmail.com](mailto:shauryajt3455@gmail.com)
 
 ### Project Status
 This project is currently in progress. We welcome contributions and suggestions for improving the document summarization capabilities. Specifically, we are seeking assistance with implementing handwriting recognition features. If you have expertise or ideas in this area, please contact us.
