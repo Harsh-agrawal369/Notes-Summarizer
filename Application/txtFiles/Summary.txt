@@ -1,0 +1,44 @@
+Here is a summarized version of the text in points, highlighting the important concepts:
+
+**Education:**
+
+* Bachelor of Technology in Information Technology from Vellore Institute of Technology (2021-2025)
+* Senior Secondary Education from Sanskar VidhyaPeeth School (2021)
+* Higher Secondary Education from St' Mary'$ cO-ed School (2019)
+
+**Technical Skills:**
+
+* Programming languages: Java, Python, C/C++, Javascript, R
+* Databases: MySQL, MongoDB
+* Frameworks: NodeJS, React, Streamlit
+* Technologies: Google, AWS, Docker, Git
+* Certifications: Ultimate AWS Developer Associate by Stephane Maarek (91%)
+
+**Experience:**
+
+* Web Development Intern at Certainty Infotech Pvt: Ltd. (September 2023)
+	+ Developed static pages for Bakery using React-js
+	+ Created a comprehensive Authentication system with user authentication, password management, and Google OAuth integration
+	+ Utilized Node.js and MongoDB to craft efficient APIs for login, sign up, password management, and JWT token-based authentication
+* Personal Projects:
+	+ Travel Buddy Finder: A platform for college students to find travel mates and share costs
+		- Implemented strong authentication using nodemailer, Google-O-Auth2, and JWT tokens
+		- Implemented CRUD operations for travel requests
+	+ Movie Recommender System: A system that uses machine learning to recommend movies based on user preferences
+		- Used Python for data visualization and cleaning to ensure reliable analysis and precise movie recommendations
+
+**Achievements:**
+
+* Presented a research paper on "Digital Forensic Analysis" at IEEE ic-ETITE'24 conference
+* Secured third place in a hackathon by SITE School Vit and Maltego Technologies Germany, showcasing cyber security and forensic analysis skills
+
+**Certifications and Courses:**
+
+* Artificial Intelligence and Machine Learning with SmartInternz (Certificate)
+* Ultimate AWS Developer Associate by Stephane Maarek (Certificate)
+
+**Relevant Courses:**
+
+* Machine Learning and Vectorization
+* Data Visualization with Matplotlib
+* Streamlit.io

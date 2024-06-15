@@ -87,7 +87,7 @@ def upload_file(request):
                 messages=[
                     {
                         "role": "user",
-                        "content": f"Summarize the following text:\n\n{text}\n\n Please make it in points and highlight the important concepts",
+                        "content": f"Summarize the following text:\n\n{text}\n\n Make points in form of bullets",
                     }
                 ],
                 model="llama3-8b-8192",
@@ -130,7 +130,7 @@ def empty_dir(dir_name):
 # Function to convert PDF to images
 def pdf_to_image(path_file, DOWNLOAD_FOLDER, elemnt):
     # converting pdf file page to jpg and storing in list
-    pages = convert_from_path(path_file, dpi=220, poppler_path=r'C:\Program Files\poppler-23.07.0\Library\bin')
+    pages = convert_from_path(path_file, dpi=220, poppler_path=r'D:/code/python/Notes_App/poppler-23.07.0/Library/bin')
     image_counter = 1
     page_lst = []
     # saving all jpg file one by one in same location
