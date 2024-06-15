@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 django = "*"
+pdf2image = "*"
+opencv-python = "*"
+easyocr = "*"
+groq = "*"
+decouple = "*"
 
 [dev-packages]
 
