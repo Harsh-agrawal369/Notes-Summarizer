@@ -13,6 +13,11 @@ This project facilitates document summarization by extracting text content from 
 ## Getting Started
 Follow these steps to use the application:
 
+### Initialize the application
+
+Before running the application, setup a django evnironment and install all the requirements.
+Open the Applications directory, and if not already present create 3 more directories named "Dir1", "Dir2", "txtFiles".
+
 1. **Upload:** Provide a PDF or image file with text content.
 2. **Processing:** Files are converted to PDF (if necessary) and text is extracted using OCR.
 3. **Summarize:** The extracted text is sent to llama 3 API for summarization.
